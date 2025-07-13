@@ -103,7 +103,7 @@ h1, h2, h3 {
 
 /* Navigation */
 nav {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(255, 255, 255);
     backdrop-filter: blur(10px);
     padding: 25px 0;
     position: sticky;
@@ -112,9 +112,17 @@ nav {
     right: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--medium-gray);
-    position: sticky;
     margin-bottom: -90px; /* Negative margin to compensate for body padding */
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
 
+.nav-icon {
+    width: 77px;
+    height: 77px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .nav-overlay {
@@ -136,6 +144,7 @@ nav {
 }
 
 .nav-container {
+    flex: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
@@ -190,8 +199,9 @@ nav {
     width: 100%;
 }
 
+/* HERO */
 header {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/5.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -210,7 +220,7 @@ header {
 .logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3.5rem;
-    margin-bottom: 30px;
+    margin-bottom: -10px;
     color: var(--white);
     font-weight: 500;
     letter-spacing: 2px;
@@ -739,8 +749,19 @@ footer {
         flex-wrap: wrap;
     }
     
+    .nav-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-left: 20% !important;
+    }
+
+    
     .nav-logo {
         font-size: 1.5rem;
+        margin-left: -10% !important;
+
     }
     
     header {
