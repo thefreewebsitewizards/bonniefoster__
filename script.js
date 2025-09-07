@@ -4,7 +4,11 @@ window.addEventListener('load', function() {
 });
 
 // Page exit animation
-window.addEventListener('beforeunload', function() {
+window.addEventListener('beforeunload', function(e) {
+    // Don't trigger page exit animation for mailto links
+    if (e.target && e.target.activeElement && e.target.activeElement.href && e.target.activeElement.href.startsWith('mailto:')) {
+        return;
+    }
     document.body.classList.add('page-exit');
 });
 
