@@ -284,8 +284,9 @@ header p {
     .hamburger {
         display: block;
         position: fixed;
-        top: 10px;
+        top: 50px;
         right: 20px;
+        transform: translateY(-50%);
     }
 
     nav {
@@ -732,6 +733,17 @@ footer {
     padding: 40px 0;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
 }
 
 /* Responsive */
